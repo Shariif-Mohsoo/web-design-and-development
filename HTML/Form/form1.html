@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Input Types Example</title>
+</head>
+
+<body>
+
+    <h1>All Input Types Form</h1>
+    <h2>Form's Overview</h2>
+
+    <form action="/submit" method="GET">
+
+        <!-- Text and Password -->
+        <label for="username" >Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username"><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter password"><br><br>
+
+        <!-- Email and URL -->
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter email"><br><br>
+
+        <label>Website:</label>
+        <input type="url" name="website" placeholder="https://example.com"><br><br>
+
+        <!-- Number and Range -->
+        <label>Age:</label>
+        <input type="number" name="age" min="1" max="100"><br><br>
+
+        <label>Volume:</label>
+        <input type="range" name="volume" min="0" max="100"><br><br>
+
+        <!-- Date and Time -->
+        <label>Date:</label>
+        <input type="date" name="date"><br><br>
+
+        <label>Time:</label>
+        <input type="time" name="time"><br><br>
+
+        <label>Month:</label>
+        <input type="month" name="month"><br><br>
+
+        <label>Week:</label>
+        <input type="week" name="week"><br><br>
+
+        <label>Local Date & Time:</label>
+        <input type="datetime-local" name="datetime"><br><br>
+
+        <!-- Color -->
+        <label>Favorite Color:</label>
+        <input type="color" name="favcolor"><br><br>
+
+        <!-- Radio and Checkbox -->
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <p>Interests:</p>
+        <input type="checkbox" id="coding" name="interest" value="coding">
+        <label for="coding">Coding</label>
+        <input type="checkbox" id="music" name="interest" value="music">
+        <label for="music">Music</label><br><br>
+
+        <!-- File Upload -->
+        <label>Upload File:</label>
+        <input type="file" name="myfile"><br><br>
+
+        <!-- Hidden -->
+        <input type="hidden" name="userid" value="12345">
+
+        <!-- Search -->
+        <label>Search:</label>
+        <input type="search" name="query" placeholder="Search here..."><br><br>
+
+        <!-- Telephone -->
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" placeholder="e.g. +92-300-1234567"><br><br>
+
+        <!-- Image Input -->
+        <p>Click the image to submit:</p>
+        <input type="image" src="https://via.placeholder.com/100" alt="Submit" width="100"><br><br>
+
+        <!-- Reset and Submit Buttons -->
+        <input type="reset" value="Reset Form">
+        <input type="submit" value="Submit Form"><br><br>
+
+        <!-- Textarea -->
+        <label>Comments:</label><br>
+        <textarea name="comments" rows="4" cols="40" placeholder="Write your comments here..."></textarea><br><br>
+
+        <!-- Normal Button -->
+        <button type="button" >Click Me</button>
+
+    </form>
+
+</body>
+
+</html>
