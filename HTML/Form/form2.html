@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Select and Fieldset Example</title>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form action="/register" method="GET">
+
+        <!-- FIELDSET helps group related inputs -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name"><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="10" max="100"><br><br>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Enter your country"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- SELECT and OPTION -->
+        <fieldset>
+            <legend>Course Selection</legend>
+
+            <label for="course">Choose a Course:</label>
+            <select id="course" name="course">
+                <option value="">--Select a Course--</option>
+
+                <!-- OPTGROUP to group similar options -->
+                <optgroup label="Web Development">
+                    <option value="html">HTML Basics</option>
+                    <option value="css">CSS Fundamentals</option>
+                    <option value="js">JavaScript</option>
+                </optgroup>
+
+                <optgroup label="Programming">
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                </optgroup>
+            </select>
+            <br><br>
+
+            <label for="session">Preferred Session:</label>
+            <select id="session" name="session">
+                <option value="morning">Morning</option>
+                <option value="evening">Evening</option>
+                <option value="weekend">Weekend</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- OUTPUT example (shows calculated value) -->
+        <fieldset>
+            <legend>Calculate Total Marks</legend>
+
+            <label for="marks1">Marks 1:</label>
+            <input type="number" id="marks1" name="marks1" value="0" oninput="calcTotal()"><br><br>
+
+            <label for="marks2">Marks 2:</label>
+            <input type="number" id="marks2" name="marks2" value="0" oninput="calcTotal()"><br><br>
+
+            <label>Total:</label>
+            <output id="total">0</output>
+        </fieldset>
+
+        <br>
+
+        <!-- Submit and Reset -->
+        <input type="submit" value="Submit Form">
+        <input type="reset" value="Reset Form">
+
+    </form>
+</body>
+
+</html>
