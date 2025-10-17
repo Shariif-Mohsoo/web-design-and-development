@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background:linear-gradient(120deg,rgba(50,53,50,.5),rgba(150,
+        153,
+        150,
+        .5));
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+h1{
+    background-color: aliceblue !important;
+    color: black !important;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    width: 70%;
+    margin: 5rem auto;
+    box-shadow: .4rem .5rem .7rem greenyellow;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
+ul.gym_list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
+    padding: 2rem;
+    background-color: aqua;
+}
+li.gym_item{
+    margin-right: 1rem;
+}
+
+
+ul#diet_list{
+    background-color: aquamarine;    
+}
+
+ul#diet_list li#diet_items_1 {
+    background-color:blanchedalmond;
+    padding: 2rem;
+    font-size: 2rem;
+}
+ul#diet_list li#diet_items_2{
+    background-color: #fff;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+ul.links_list{
+    list-style: none;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+}
+
+ul.links_list li.link_item{
+    font-family:monospace;
+}
+
+ul.links_list li.link_item a{
+    color: antiquewhite;
+}
