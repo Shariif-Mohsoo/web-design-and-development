@@ -1,0 +1,185 @@
+/* Import a modern, technical-looking font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* --- Animation Keyframes for Background --- */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    /* Existing background color replaced with a large, animated gradient */
+    background: linear-gradient(-45deg, #1a1a2e, #0f0f1d, #2d1a3c, #1a1a2e);
+    background-size: 400% 400%;
+    /* Make the gradient large so the shift is subtle */
+    animation: gradient-shift 30s ease infinite;
+    /* Slow, continuous loop */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    color: #e0e0e0;
+}
+
+/* --- Calculator Container (No changes needed here, keeping fixed size and shadow) --- */
+.calculator-container {
+    width: 420px;
+    height: 700px;
+    background-color: #24283b;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+        0 0 0 10px rgba(45, 49, 66, 0.4);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.calculator-header h1 {
+    font-size: 1.8em;
+    color: #00bcd4;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+/* --- Display Area --- */
+.display-area {
+    background-color: #161622;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: right;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #00bcd4;
+}
+
+.history-display {
+    min-height: 20px;
+    font-size: 0.8em;
+    color: #888888;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    opacity: 0.7;
+}
+
+.main-display {
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: 700;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 1.2;
+}
+
+/* --- Buttons Grid --- */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    padding: 15px 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Button Styling Categories --- */
+
+/* Numbers and Decimal */
+.num-btn {
+    background-color: #3e4451;
+}
+
+.num-btn:hover {
+    background-color: #58606e;
+}
+
+/* Operators (+, -, *, /) */
+.op-btn {
+    background-color: #ff9800;
+    color: #1a1a2e;
+}
+
+.op-btn:hover {
+    background-color: #ffb74d;
+}
+
+/* Scientific Functions (sin, log, etc.) */
+.sci-btn,
+.func-btn {
+    background-color: #00bcd4;
+    color: #1a1a2e;
+    font-weight: bold;
+}
+
+.sci-btn:hover,
+.func-btn:hover {
+    background-color: #4dd0e1;
+}
+
+/* Clear (C) */
+.clear-btn {
+    background-color: #e53935;
+    color: #ffffff;
+}
+
+.clear-btn:hover {
+    background-color: #ef5350;
+}
+
+/* Delete (⌫) */
+.delete-btn {
+    background-color: #ff7043;
+    color: #ffffff;
+}
+
+.delete-btn:hover {
+    background-color: #ff8a65;
+}
+
+/* Equal (=) */
+.equal-btn {
+    grid-column: span 2;
+    background-color: #4caf50;
+    color: #1a1a2e;
+    font-size: 1.5em;
+}
+
+.equal-btn:hover {
+    background-color: #66bb6a;
+}
+
+/* Special Layout for 0, ., and = buttons */
+.zero-large {
+    grid-column: span 1;
+}

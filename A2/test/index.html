@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <h1>SCI-CAL ELITE 🧪</h1>
+        </div>
+        <div class="display-area">
+            <div id="history-display" class="history-display"></div>
+            <div id="main-display" class="main-display">0</div>
+        </div>
+
+        <div class="buttons-grid">
+            <!-- Row 1 -->
+            <button class="func-btn" onclick="appendInput('(')">(</button>
+            <button class="func-btn" onclick="appendInput(')')">)</button>
+            <button class="func-btn" onclick="insertPi()">π</button>
+            <button class="clear-btn" onclick="clearDisplay()">C</button>
+            <button class="delete-btn" onclick="deleteLast()">⌫</button>
+
+            <!-- Row 2 -->
+            <button class="sci-btn" onclick="calculateScientific('sin')">sin</button>
+            <button class="sci-btn" onclick="calculateScientific('cos')">cos</button>
+            <button class="sci-btn" onclick="calculateScientific('tan')">tan</button>
+            <button class="op-btn" onclick="appendOperator('/')">÷</button>
+            <button class="sci-btn" onclick="calculateScientific('exp')">exp</button>
+
+            <!-- Row 3 -->
+            <button class="sci-btn" onclick="calculateScientific('log')">log</button>
+            <button class="sci-btn" onclick="calculateScientific('sqrt')">√x</button>
+            <button class="sci-btn" onclick="calculateScientific('pow')">xʸ</button>
+            <button class="op-btn" onclick="appendOperator('*')">×</button>
+            <button class="op-btn" onclick="appendOperator('^')">^</button>
+
+            <!-- Row 4 -->
+            <button class="num-btn" onclick="appendInput('7')">7</button>
+            <button class="num-btn" onclick="appendInput('8')">8</button>
+            <button class="num-btn" onclick="appendInput('9')">9</button>
+            <button class="op-btn" onclick="appendOperator('-')">-</button>
+            <button class="op-btn" onclick="appendOperator('%')">%</button>
+
+            <!-- Row 5 -->
+            <button class="num-btn" onclick="appendInput('4')">4</button>
+            <button class="num-btn" onclick="appendInput('5')">5</button>
+            <button class="num-btn" onclick="appendInput('6')">6</button>
+            <button class="op-btn" onclick="appendOperator('+')">+</button>
+            <button class="num-btn" onclick="appendInput('00')">00</button>
+
+            <!-- Row 6 -->
+            <button class="num-btn" onclick="appendInput('1')">1</button>
+            <button class="num-btn" onclick="appendInput('2')">2</button>
+            <button class="num-btn" onclick="appendInput('3')">3</button>
+            <button class="num-btn zero-large" onclick="appendInput('0')">0</button>
+            <button class="num-btn" onclick="appendInput('.')">.</button>
+            <button class="equal-btn" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
