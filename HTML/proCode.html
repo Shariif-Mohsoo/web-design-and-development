@@ -2,6 +2,8 @@
 <html lang="en" >
     <head>
         <meta charset="utf-8"/>
+        <meta name="description" content="HTML tutorial for beginners">
+        <meta name="keywords" content="HTML,beginners">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bro Code HTML</title>
     </head>
@@ -110,5 +112,103 @@
                     <td>Closed</td>
                 </tr>
              </table>
+             <!-- Adding colors to the web page -->
+              <div  style="background-color: #000;" >
+                <h1 style="color: red;">Hello</h1>
+                <h1 style="color: rgb(5, 240, 232);">Bro</h1>
+                <h1 style="color: rgba(202, 220, 228, .8);">Code</h1>
+                <p  style="color: green;">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus eaque beatae quia soluta assumenda doloribus totam quisquam omnis velit incidunt, non vitae similique ab sed, adipisci error magni corrupti cupiditate?
+                </p>
+              </div>
+              <br>
+              <hr>
+              <!-- div vs span -->
+               <h1>Hello</h1>
+               <div style="background-color: #ff44;">
+                   <p> <span style="color: aquamarine;">Lorem ipsum dolor sit amet consectetur, </span>adipisicing elit. Quas distinctio at in dolor vel maxime ratione doloremque alias, ullam, minus ea? Officiis laborum voluptas cumque eum, a molestiae nam provident.</p>
+                </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas distinctio at in dolor vel maxime ratione doloremque
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas distinctio at in dolor vel maxime ratione doloremque alias, ullam, minus ea? Officiis laborum voluptas cumque eum, a molestiae nam provident.
+            </p>
+            alias, ullam, minus ea? Officiis laborum voluptas cumque eum, a molestiae nam provident.</p>
+            <br>
+            <hr>
+            <!-- 
+                iframe: embed content from another source into an HTML document
+                ex. used for ads,used in many hacking techniques.
+            -->
+            <iframe src="adv.html"></iframe>
+            <br>
+            <hr>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore maiores cupiditate voluptate architecto incidunt consequatur? Nihil eaque eos a, aliquam ratione nesciunt rem ipsum natus, deleniti, suscipit autem culpa quibusdam?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore maiores cupiditate voluptate architecto incidunt
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore maiores cupiditate voluptate architecto incidunt consequatur? Nihil eaque eos a, aliquam ratione nesciunt rem ipsum natus, deleniti, suscipit autem culpa quibusdam?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore maiores cupiditate voluptate architecto incidunt consequatur? Nihil eaque eos a, aliquam ratione nesciunt rem ipsum natus, deleniti, suscipit autem culpa quibusdam?
+            </p>
+            consequatur? Nihil eaque eos a, aliquam ratione nesciunt rem ipsum natus, deleniti, suscipit autem culpa quibusdam?</p>
+            <!-- Button -->
+             <button onclick="handleClick()"  style="background-color: #333;color:#00ff00;" >Click me</button>
+             <p id="btnText">Click the buttton</p>
+             <script>
+                    function handleClick(){
+                        document.getElementById("btnText").innerHTML="<b><i>Clicked</i></b>"
+                    }
+             </script>
+             <br>
+             <hr>
+             <!-- Form -->
+              <form action="#" method="post">
+                <div>
+                    <input id="fname" type="text" minlength="4" maxlength="25" name="fname" placeholder="Enter your first name" required >
+                    <label for="fname">First name</label>
+                </div>
+                <div>
+                    <input id="lname" type="text" minlength="4" maxlength="25" name="lname" placeholder="Enter your last name" required>
+                    <label for="lname">Last name</label>
+                </div>
+
+                <div>
+                    <input type="password" name="pass" minlength="6" maxlength="12" required>
+                </div>
+                <div>
+                    <input type="email" name="pass"  required>
+                </div>
+                <div>
+                    <input type="tel" name="telephone" id="">
+                </div>
+                <div>
+                    <input type="date" name="date" id="">
+                </div>
+                <div><input type="number" name="num" min="1" max="99" value="15" id=""></div>
+                <div>
+                    <label for="payment">payment:</label>
+                    <select name="payment" id="payment">
+                        <option value="paypal">Paypal</option>
+                        <option value="stripe">Stripe</option>
+                        <optgroup label="Pakistani ">
+                           <option value="jazzcash">jazzcash</option>
+                        <option value="easypaisa">easypaisa</option>
+                        <option value="sadapay">sadapay</option>
+                        </optgroup>  
+                    </select>
+                </div>
+                <div>
+                    <label for="mr" >Mr.</label>
+                    <input type="radio" name="name" id="mr">
+                    <label for="mis">Mis.</label>
+                    <input type="radio" name="name" id="mis">
+                    <label for="phd">PhD.</label>
+                    <input type="radio" name="name" id="phd">
+                </div>
+                <div>
+                    <label for="">Hello</label>
+                    <input type="checkbox" name="" id="">
+                    <label for="">World</label>
+                    <input type="checkbox" name="" id="">
+                </div>
+                <div><input type="reset"></div>
+                <div><input type="submit"></div>
+              </form>
         </body>
 </html>
